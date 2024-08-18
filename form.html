@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Ice Cream Shop</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <!-- <style>
+        #success-message {
+            display: none;
+            color: green;
+        }
+    </style> -->
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert('Thanks for ordering!');
+            event.target.reset();
+            location.href = "index.html";
+        }
+    </script>
+
+    <body>
+        <center>
+            <h2 class="ftitle">Check Out</h2>
+            <form onsubmit="handleSubmit(event)" method="post" class="form">
+                <label for="name" class="flabel">Name:</label><br>
+                <input type="text" id="name" name="name" required class="normal-input all-input"><br><br>
+    
+                <!-- <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" required><br><br> -->
+    
+                <label for="address" class="flabel">Address:</label><br>
+                <input type="address" id="address" name="address" required class="normal-input all-input"><br><br>
+    
+                <label for="phone" class="flabel">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" class="normal-input all-input"><br><br>
+    
+                <input type="submit" value="Submit" class="send-msg-btn button ad-buy-btn">
+            </form>
+            <!-- <div id="success-message">
+                Thanks for ordering!
+            </div> -->
+        </center>
+    </body>
+
+</html>
